@@ -18,13 +18,13 @@ class Command(BaseCommand):
             a = User()
             a.first_name = names.get_first_name()
             a.last_name = names.get_last_name()
+            a.username = str(a.first_name) + str(a.last_name)
             a.type = Type.student
             a.ole = StudentGroup.objects.all()[randint(1, 5)]
-            a.direction_curator = Direction.objects.all()[randint(0, 4)]
+            # a.direction_curator = Direction.objects.all()[randint(0, 4)]
             a.save()
             l.append(a)
 
         if len(l) >= 100:
             self.stdout.write('100 random Students has been generated Successfully !!!')
             self.stdout.write('\n')
-            print(l[:10], sep='\n')

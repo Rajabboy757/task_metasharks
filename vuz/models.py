@@ -45,7 +45,7 @@ class User(AbstractUser):
             raise ValidationError({"detail": "Group is full"})
 
     def __str__(self):
-        return f'{self.type}, {self.ole}, {self.direction_curator}'
+        return f'{self.username}, {self.type}, {self.ole}'
 
 
 class Subject(Base):
