@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% for m in menu_items %}
+
+	<li><a href="{{ c.get_absolute_url }}">{{m.name}}</a></li>
+
+	{% endfor %}
+{% endblock %}
