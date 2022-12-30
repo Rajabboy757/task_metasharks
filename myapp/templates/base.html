@@ -2,7 +2,6 @@
 {% load menu_tags %}
 <html>
 <head>
-	<title>{{title}}</title>
 	<link type="text/css" href="{% static 'css/styles.css' %}" rel="stylesheet" />
 </head>
 <body>
@@ -21,7 +20,15 @@
 		<li><a href="{% url 'home' %}">Главная</a></li>
 {% endif %}
 
-{% show_menus menu_selected=menu_selected %}
+
+
+
+
+{% draw_menu menu_selected=menu_selected %}
+
+
+
+
 
 	</ul>
 </td>

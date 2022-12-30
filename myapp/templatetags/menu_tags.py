@@ -11,7 +11,7 @@ def get_menus(filter=None):
         return Menu.objects.filter(pk=filter)
 
 @register.inclusion_tag('list_menus.html')
-def show_menus(sort='name', menu_selected=0):
+def draw_menu(sort='name', menu_selected=0):
     if not sort:
         menu = Menu.objects.all()
     else:

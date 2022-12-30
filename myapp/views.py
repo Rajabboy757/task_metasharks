@@ -30,7 +30,6 @@ def show_menu(request, menu_id):
 
     context = {
         'menu_items': menu_items,
-        'title': 'Отображение по рубрикам',
         'menu_selected': menu_id,
     }
 
